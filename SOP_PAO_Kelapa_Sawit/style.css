@@ -1,0 +1,179 @@
+/* =========================================================
+   SOP PAO KELAPA SAWIT — DESAIN RESPONSIF
+   01. Variabel  02. Dasar  03. Hero  04. Layout & navigasi
+   05. Konten    06. Kalkulator  07. Footer  08. Responsive
+   ========================================================= */
+
+/* 01. VARIABEL WARNA & TEMA */
+:root {
+  --bg: #f5f7f2;
+  --surface: #ffffff;
+  --ink: #182c25;
+  --muted: #64736c;
+  --green: #194f38;
+  --green-deep: #0e3025;
+  --green-light: #e9f3ea;
+  --lime: #c9e777;
+  --border: #e3e9e1;
+  --shadow: 0 12px 30px rgba(17, 46, 33, 0.055);
+}
+
+/* 02. DASAR */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 22px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.75 Inter, "Segoe UI", Arial, sans-serif; }
+a { color: inherit; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #99bd62; outline-offset: 3px; }
+[hidden] { display: none !important; }
+
+/* 03. HERO */
+.hero { background: radial-gradient(circle at 90% 22%, #326e45 0, transparent 34%), linear-gradient(123deg, #0c2e25 0%, #164935 75%, #20583a 100%); color: #fff; overflow: hidden; }
+.hero-inner { position: relative; max-width: 1250px; padding: 26px 30px 48px; margin: auto; }
+.hero-top { display: flex; align-items: center; gap: 12px; padding-bottom: 47px; }
+.brand-mark { width: 36px; height: 36px; border-radius: 11px; background: var(--lime); color: var(--green-deep); display: grid; place-items: center; font-size: 24px; }
+.brand { font-size: 15px; font-weight: 850; letter-spacing: .12em; }
+.brand-accent { color: var(--lime); padding: 0 3px; }
+.hero-badge { margin-left: auto; border: 1px solid rgba(255,255,255,.25); padding: 6px 13px; border-radius: 50px; font-size: 10px; letter-spacing: .16em; font-weight: 700; }
+.hero-content { position: relative; max-width: 890px; z-index: 1; }
+.eyebrow { color: var(--lime); letter-spacing: .19em; font-size: 11px; font-weight: 800; margin: 0 0 14px; }
+.hero h1 { font-size: clamp(32px, 4.5vw, 62px); line-height: 1.12; letter-spacing: -.05em; margin: 0 0 20px; font-weight: 800; }
+.hero h1 em { color: var(--lime); font-style: normal; }
+.hero-description { max-width: 790px; color: #d9e7df; font-size: 13px; line-height: 1.9; margin: 0; }
+.hero-pills { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 25px; }
+.hero-pills span { padding: 5px 13px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); border-radius: 50px; font-size: 11px; font-weight: 650; }
+.hero-decoration { position: absolute; right: -38px; bottom: -170px; opacity: .06; font-size: 460px; line-height: 1; pointer-events: none; }
+
+/* 04. LAYOUT & NAVIGASI */
+.wrap { max-width: 1250px; padding: 34px 30px 55px; margin: auto; display: grid; grid-template-columns: 270px minmax(0, 1fr); align-items: start; gap: 28px; }
+nav { position: sticky; top: 22px; max-height: calc(100vh - 44px); overflow: auto; scrollbar-width: thin; }
+.nav-card { padding: 21px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 17px; box-shadow: var(--shadow); }
+.nav-heading { display: flex; justify-content: space-between; align-items: center; margin: 0 7px 20px; }
+.nav-label { font-size: 10px; font-weight: 850; letter-spacing: .15em; color: var(--muted); }
+.nav-dot { width: 8px; height: 8px; background: #a4ce79; border-radius: 50%; }
+.search-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.search-wrap { position: relative; }
+.search-wrap span { position: absolute; left: 12px; top: 3px; font-size: 27px; color: #7c9184; pointer-events: none; }
+nav input { width: 100%; border: 1px solid var(--border); background: #f7f9f6; border-radius: 10px; padding: 10px 11px 10px 34px; color: var(--ink); outline: none; font-size: 12px; }
+nav input:focus { border-color: #8caf83; background: #fff; }
+.search-count { padding: 10px 3px 0; font-size: 11px; color: var(--muted); }
+.nav-divider { border-top: 1px solid var(--border); margin: 16px 0; }
+nav a { display: block; padding: 9px 12px; margin-bottom: 3px; color: #526159; text-decoration: none; font-weight: 550; font-size: 12px; line-height: 1.5; border-radius: 9px; transition: background .2s, color .2s, transform .2s; }
+nav a:hover, nav a:focus-visible { color: var(--green); background: var(--green-light); transform: translateX(2px); }
+nav a.sub { padding-left: 23px; color: #79877d; font-size: 11.5px; }
+nav a.nav-extra { color: var(--green); font-weight: 720; }
+main { min-width: 0; }
+
+/* 05. KONTEN SOP */
+.content-intro { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: 0 0 20px; }
+.eyebrow.dark { color: #5f9465; margin-bottom: 5px; }
+.content-intro h2 { font-size: clamp(24px, 3vw, 34px); line-height: 1.25; letter-spacing: -.04em; margin: 0 0 5px; }
+.content-intro p:last-child { color: var(--muted); font-size: 13px; margin: 0; }
+.intro-count { white-space: nowrap; border: 1px solid #d3e3d0; background: #e8f2e6; color: var(--green); border-radius: 40px; padding: 7px 14px; font-size: 12px; font-weight: 800; }
+.note { background: #eef6e7; border: 1px solid #d8e9cc; border-left: 4px solid #7ba84f; border-radius: 12px; padding: 16px 19px; margin-bottom: 20px; color: #40553b; font-size: 12px; }
+.note strong { display: block; color: #285238; margin-bottom: 3px; font-size: 13px; }
+.note p { margin: 0; }
+section { scroll-margin-top: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 25px 29px; margin-bottom: 17px; box-shadow: var(--shadow); }
+section h2 { color: var(--green); font-size: 21px; line-height: 1.35; letter-spacing: -.025em; margin: 0 0 6px; }
+section h3 { font-size: 13px; margin: 20px 0 8px; color: #283d30; }
+section p { margin: 10px 0; color: #4c5a53; font-size: 13px; }
+.tag { font-size: 11px; color: #819087; font-weight: 700; letter-spacing: .04em; margin-bottom: 12px; }
+ol, ul { margin: 8px 0; padding-left: 23px; }
+li { margin: 7px 0; padding-left: 3px; color: #4c5b52; font-size: 13px; }
+li::marker { color: #5d9a67; font-weight: 800; }
+.f { margin-top: 17px; padding: 13px 16px; background: #edf5ec; border: 1px solid #d6e8d5; border-radius: 10px; color: var(--green); font: 600 12px/1.8 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-x: auto; }
+.tw { width: 100%; overflow-x: auto; margin-top: 15px; border: 1px solid var(--border); border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { border-bottom: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+tr:last-child td { border-bottom: 0; }
+th { background: #e8f2e6; color: var(--green); font-weight: 800; }
+tr:nth-child(even) td { background: #fbfcfa; }
+#empty-state { background: #fff; padding: 40px 20px; border: 1px dashed #ccd9ca; border-radius: 15px; text-align: center; margin-bottom: 18px; }
+#empty-state h3 { margin: 0; }
+#empty-state p { color: var(--muted); }
+
+/* 06. KALKULATOR */
+.calc { border: 1px solid #cde2ce; background: linear-gradient(135deg, #fff 72%, #f5faef); }
+.calc-heading { display: flex; justify-content: space-between; gap: 10px; align-items: start; margin-bottom: 20px; }
+.calc-heading .tag { margin: 4px 0; }
+.calc-icon { display: grid; place-items: center; background: #e6f2df; border-radius: 12px; height: 42px; width: 42px; color: var(--green); font-size: 25px; }
+.calc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.calc label { display: flex; flex-direction: column; gap: 6px; color: #526359; font-weight: 700; font-size: 12px; }
+.calc input { width: 100%; min-width: 0; border: 1px solid #dce6dc; border-radius: 9px; background: #fff; color: var(--ink); padding: 10px 12px; }
+.calc input:focus { outline: 2px solid #a4c88c; border-color: #86a979; }
+.calc button { display: inline-flex; justify-content: center; align-items: center; gap: 17px; margin-top: 23px; padding: 11px 20px; background: var(--green); color: #fff; border: none; border-radius: 10px; font-size: 12px; font-weight: 800; transition: transform .2s, background .2s; }
+.calc button:hover { transform: translateY(-2px); background: #286447; }
+.calc button span { font-size: 17px; }
+#out { margin-top: 18px; }
+.result-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.result-item { display: flex; flex-direction: column; gap: 4px; background: #edf5e9; border: 1px solid #d5e9d1; border-radius: 10px; padding: 13px 15px; }
+.result-item span { color: #5c735e; font-size: 11px; }
+.result-item strong { font-size: 20px; color: var(--green); letter-spacing: -.02em; }
+.error-message { color: #a83737; background: #fff2f2; padding: 12px; border-radius: 9px; }
+
+/* 07. FOOTER */
+footer { max-width: 1190px; padding: 26px 30px 34px; margin: 0 auto 25px; background: #fff; border: 1px solid var(--border); border-radius: 16px; }
+footer b { font-size: 17px; color: var(--green); }
+footer ol { columns: 2; column-gap: 40px; }
+footer li { break-inside: avoid; margin: 11px 0; }
+footer a { color: #356e4b; text-decoration-color: #bfdbc4; overflow-wrap: anywhere; }
+footer a:hover { color: #153f2b; }
+.bottom-bar { background: var(--green-deep); color: #d6e9dc; padding: 20px max(30px, calc((100% - 1190px)/2)); display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 11px; }
+.bottom-bar span:first-child { color: var(--lime); letter-spacing: .14em; font-weight: 850; }
+.bottom-bar a { color: #fff; text-decoration: none; }
+
+/* 08. LAYAR TABLET & PONSEL */
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 220px minmax(0, 1fr); gap: 17px; padding: 25px 18px 40px; }
+  .hero-inner { padding: 22px 20px 38px; }
+  section { padding: 21px; }
+  .calc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  footer { margin: 0 18px 20px; }
+}
+@media (max-width: 680px) {
+  .wrap { display: block; padding: 20px 14px 30px; }
+  nav { position: static; max-height: none; margin-bottom: 25px; }
+  .nav-card { padding: 15px; }
+  #menu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; }
+  nav a { font-size: 11px; }
+  nav a.sub { padding-left: 12px; }
+  .hero-inner { padding: 18px 16px 32px; }
+  .hero-top { padding-bottom: 34px; }
+  .hero-badge { font-size: 8px; padding: 5px 8px; }
+  .hero-description { font-size: 12px; }
+  .content-intro { align-items: start; }
+  .intro-count { font-size: 10px; }
+  section { padding: 19px 17px; }
+  section h2 { font-size: 19px; }
+  .calc-grid { gap: 11px; }
+  .result-grid { grid-template-columns: 1fr; }
+  footer { margin: 0 14px 15px; padding: 20px; }
+  footer ol { columns: 1; }
+  .bottom-bar { padding: 17px; flex-wrap: wrap; }
+}
+@media (max-width: 400px) {
+  .calc-grid { grid-template-columns: 1fr; }
+  .hero-badge { display: none; }
+  .hero-pills span { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}

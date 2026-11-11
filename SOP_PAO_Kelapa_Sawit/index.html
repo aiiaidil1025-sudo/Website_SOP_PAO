@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Panduan SOP Panen, Angkut, dan Olah Kelapa Sawit beserta kalkulator AKP dan taksasi produksi.">
+  <title>SOP Panen, Angkut, Olah (PAO) Kelapa Sawit</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero" id="beranda">
+    <div class="hero-inner">
+      <div class="hero-top"><span class="brand-mark">✳</span><span class="brand">PAO<span class="brand-accent">/</span> SAWIT</span><span class="hero-badge">PANDUAN OPERASIONAL</span></div>
+      <div class="hero-content">
+        <p class="eyebrow">MANAJEMEN BUDIDAYA KELAPA SAWIT</p>
+        <h1>SOP PANEN, ANGKUT,<br><em>dan OLAH (PAO)</em></h1>
+        <p class="hero-description">Sebagai syarat dalam menyelesaikan tugas Ujian Akhir semseter, berikut adalah Informasi dari Standat Operation Proccedur dari Panen, Angkut dan Olah. Tugas ini diselesaikan oleh Muhammad Aidil Priono/24242035/STIK-BPDPKS, Eko Gunawan/24241013/SMPKS-BPDPKS, dan Hardiansyah Vikri Siregar/24242034/STIK-BPDPPKS, Semoga informasi yang disampaikan dapat membantu pembaca dalam mengetahui Standar Operasi dari Panen, Angkut, dan Olah untuk memudahkan kegiatan perkebunan.</p>
+        <div class="hero-pills"><span>13 Materi SOP</span><span>Referensi Ilmiah</span><span>Kalkulator Produksi</span></div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true"><span>✳</span></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav aria-label="Navigasi materi SOP">
+      <div class="nav-card">
+        <div class="nav-heading"><span class="nav-label">EKSPLORASI MATERI</span><span class="nav-dot"></span></div>
+        <label class="search-label" for="q">Cari materi SOP</label>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="q" type="search" autocomplete="off" placeholder="Cari SOP / kata kunci…"></div>
+        <div id="search-count" class="search-count" aria-live="polite"></div>
+        <div class="nav-divider"></div>
+        <div id="menu"></div>
+        <div class="nav-divider"></div>
+        <a class="nav-extra" href="#kalk">↗ Kalkulator AKP &amp; Taksasi</a>
+        <a class="nav-extra" href="#src">↗ Daftar Sumber</a>
+      </div>
+    </nav>
+
+    <main id="konten">
+      <div class="content-intro"><div><p class="eyebrow dark">PANDUAN PRAKTIS</p><h2>Prosedur Operasional</h2><p>Pelajari alur kerja panen hingga pengolahan kelapa sawit secara terstruktur.</p></div><span class="intro-count">13 SOP</span></div>
+      <div class="note"><strong>ⓘ &nbsp; Catatan Penting</strong><p>Isi mengacu pada literatur manajemen panen sawit (lihat Daftar Sumber). Angka ambang (mis. brondolan, kapasitas HK) berbeda antar perusahaan; <b>sesuaikan dan validasi dengan SOP resmi perusahaan/Pedoman PPKS</b> sebelum dipakai di lapangan.</p></div>
+      <div id="c"></div>
+      <div id="empty-state" hidden><h3>Materi tidak ditemukan</h3><p>Silakan coba kata kunci pencarian lainnya.</p></div>
+
+      <section id="kalk" class="calc">
+        <div class="calc-heading"><div><p class="eyebrow dark">ALAT BANTU PERHITUNGAN</p><h2>Kalkulator AKP &amp; Taksasi</h2><div class="tag">Alat bantu hitung (SOP 3 &amp; 8)</div></div><span class="calc-icon" aria-hidden="true">▦</span></div>
+        <div class="calc-grid">
+          <label>Pokok sampel<input id="a" type="number" value="100" min="1"></label>
+          <label>Pokok berbuah matang<input id="b" type="number" value="12" min="0"></label>
+          <label>Total pokok blok<input id="p" type="number" value="4000" min="0"></label>
+          <label>BJR (kg)<input id="j" type="number" value="16" min="0" step=".1"></label>
+          <label>Kapasitas panen (kg/HK)<input id="k" type="number" value="1500" min="1"></label>
+          <label>Kapasitas truk (kg)<input id="t" type="number" value="7000" min="1"></label>
+        </div>
+        <button type="button" onclick="hit()">Hitung Hasil Taksasi <span aria-hidden="true">→</span></button>
+        <div id="out" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <footer id="src"></footer>
+  <div class="bottom-bar"><span>PAO / SAWIT</span><span>Manajemen Budidaya Kelapa Sawit</span><a href="#beranda">Kembali ke atas ↑</a></div>
+</body>
+</html>
